@@ -25,10 +25,10 @@ int	ft_strcmp(char *s1, char *s2)
 	return (c);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	a[] = {"Hola A"};
 	char	b[] = {"Hola M"};
 	printf("%d", ft_strcmp(a, b));
 	printf(" %d", strcmp(a, b));
-}*/
+}

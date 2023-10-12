@@ -12,21 +12,12 @@
 
 #include "libft.h"
 
-int	ft_isascii(char *str)
+int ft_isascii(int c)
 {
-	int	c;
-
-	c = 0;
-	while (str[c])
-	{
-		if ((str[c] >= 0) && (str[c] <= 127))
-			return (0);
-		c++;
-	}
-	return (1);
+	return (c >= 0 && c <= 127);
 }
 
 /*int	main(void){
-	printf("%d",ft_isascii("dsdsadasda\n"));
+	printf("%d",ft_isascii(6));
 	return (0);
 }*/

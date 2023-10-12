@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t len)
 {
 	char	*str;
-	int		contador;
+	size_t		contador;
 
 	str = s;
 	contador = 0;
