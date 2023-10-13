@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 12:19:33 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/28 13:00:16 by andresga         ###   ########.fr       */
+/*   Updated: 2023/09/25 13:38:24 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+    size_t  c;
     if (!set || !set)
         return(0);
-        
+    while (*s1 && ft_strchr(set, *s1))
+        s1++;
+    c = ft_strlen(s1);
+    while (c && ft_strchr(set,s1[c]))
+        c--;
+    return (ft_substr(s1, 0, c + 1));       
 }
 
 /*int	main(void)

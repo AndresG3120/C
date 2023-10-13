@@ -35,11 +35,11 @@ size_t	ft_strlcat(char *dest, char *src, size_t dstsize)
 }
 
 
-int	main(void)
+/*int	main(void)
 {
 	char	dest[20] = {"Hola buenas"};
 	char	src[1] = {"M"};
 
 	printf("%zu",strlcat(dest,src,2));
 	printf("%s",dest);
-}
+}*/

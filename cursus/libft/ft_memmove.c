@@ -15,8 +15,9 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
     char *str;
-    int		c;
+    size_t		c;
     c = 0;
+    str = (char *)malloc(len);
     while (c < len)
     {
         *(str + c) = *(char *)(src + c);
@@ -31,9 +32,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
     return (dst);
 }
 
-int main(){
+/*int main(){
 	char a[] = {"Hola"};
     char b[] = {"Adios"};
 	printf("%s",memmove(&a, &b, 2));
 	return ((0));
-}
+}*/
