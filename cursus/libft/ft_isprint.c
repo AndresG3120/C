@@ -6,24 +6,15 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 20:17:50 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/28 12:36:44 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:35:59 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	int	c;
-
-	c = 0;
-	while (str[c])
-	{
-		if (((str[c] >= 0) && (str[c] <= 31)) || (str[c] == 127))
-			return (0);
-		c++;
-	}
-	return (1);
+	return (c >= 32 && c <= 126);
 }
 
 /*int	main(void){

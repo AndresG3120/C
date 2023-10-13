@@ -6,28 +6,19 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 19:11:42 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 16:13:09 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:34:38 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char *str)
+int	ft_isalnum(int c)
 {
-	int	c;
-
-	c = 0;
-	while (str[c])
-	{
-		if (!(((str[c] >= 'A') && (str[c] <= 'Z'))
-				|| ((str[c] >= 'a') && (str[c] <= 'z'))))
-			return (0);
-		c++;
-	}
-	return (1);
+	return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A'
+			&& c <= 'Z'));
 }
 
 /*int	main(void){
 	printf("%d",ft_str_is_alpha(""));
-	return 0;
+	return (0);
 }*/

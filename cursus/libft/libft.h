@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:51:29 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/28 13:17:34 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:18:43 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@
 int				ft_atoi(char *str);
 void			ft_bzero(void *s, size_t len);
 void			*ft_calloc(size_t count, size_t size);
-int				ft_isalnum(char *str);
-int				ft_isalpha(char *str);
-int ft_isascii(int c);
-int				ft_isdigit(char *str);
-int				ft_isprint(char *str);
+int				ft_isalnum(int c);
+int				ft_isalpha(int c);
+int				ft_isascii(int c);
+int				ft_isdigit(int c);
+int				ft_isprint(int c);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 char			*ft_strchr(const char *s, int c);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dest, char *src, size_t dstsize);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);

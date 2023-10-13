@@ -6,24 +6,15 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 19:48:19 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 16:13:03 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:32:53 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int	c;
-
-	c = 0;
-	while (str[c])
-	{
-		if (!(((str[c] >= '0') && (str[c] <= '9'))))
-			return (0);
-		c++;
-	}
-	return (1);
+	return (c >= '0' && c <= '9');
 }
 
 /*int	main(void){

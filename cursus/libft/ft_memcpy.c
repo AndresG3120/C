@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:49:10 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 17:23:02 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:57:13 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t		c;
-
-	c = 0;
-	while (c < n)
-	{    
-		*(char *)(dst + c) = *(char *)(src + c);
-        c++;
+	if (!dst && !src)
+		return (0);
+	while (n-- > 0)
+	{
+		*(unsigned char *)(dst + n) = *(unsigned char *)(src + n);
 	}
 	return (dst);
 }
 
 /*int main(){
 	char a[] = {"Hola"};
-    char b[] = {"Adios"};
+	char b[] = {"Adios"};
 	printf("%s",ft_memcpy(&a, &b, 2));
 	return ((0));
 }*/

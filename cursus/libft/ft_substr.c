@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 11:53:08 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/28 13:06:57 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:11:37 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	c;
 
 	c = 0;
+	if (!s)
+		return (NULL);
+	if ((size_t)start > (size_t)ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > (ft_strlen(s) - start))
+		len = (ft_strlen(s) - start);
 	p = malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);
-	while (c <= len)
+	while (c < len)
 	{
 		p[c] = s[c + start];
 		c++;

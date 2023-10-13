@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:24:31 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 16:39:10 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:38:00 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*str;
-	size_t		contador;
+	size_t	contador;
 
 	str = b;
 	contador = 0;

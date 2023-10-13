@@ -6,30 +6,31 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 10:52:46 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/25 13:35:00 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:38:58 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int cont;
-    cont = -1;
-    while (s[cont])
-    {
-        cont++;
-        if ((s[cont]) == c)
-        {
-            return ((char *)&s[cont]);
-        }
-    }
-    return (NULL);
+	int	cont;
+
+	cont = 0;
+	while (s[cont])
+	{
+		if ((s[cont]) == (char)c)
+			return ((char *)&s[cont]);
+	cont++;
+	}
+	if ((char)c == s[cont])
+		return ((char *)&s[cont]);
+	return (NULL);
 }
 
 /*int	main(void)
 {
 	char	dest[] = {"Hola buenas"};
-    char x = 'b';
-    printf("%s", ft_strchr(dest,x));
+	char x = 'a';
+	printf("%s", ft_strchr(dest,x));
 }*/

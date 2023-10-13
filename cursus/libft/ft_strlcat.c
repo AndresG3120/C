@@ -6,40 +6,45 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:50:35 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 19:08:24 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:58:47 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
 	size_t	c1;
 	size_t	c2;
+	size_t	total;
 
 	c1 = 0;
 	c2 = 0;
-	while (dest[c1])
+	total = ft_strlen(dst);
+	if (total < (dstsize - 1) && dstsize > 0)
 	{
-		c1++;
+		while (dst[c1])
+		{
+			c1++;
+		}
+		while (src[c2] && c1 < (dstsize - 1))
+		{
+			dst[c1] = src[c2];
+			c1++;
+			c2++;
+		}
+		dst[c1] = '\0';
 	}
-	while (src[c2] && c2 < dstsize)
-	{
-		dest[c1] = src[c2];
-		c1++;
-		c2++;
-	}
-	dest[c1] = '\0';
-	c1++;
-	return (c1);
+	if (total >= dstsize)
+		total = dstsize;
+	return (total + ft_strlen(src));
 }
-
 
 /*int	main(void)
 {
-	char	dest[20] = {"Hola buenas"};
-	char	src[1] = {"M"};
+	char	dst[20] = {"_"};
+	char	src[20] = {"dd"};
 
-	printf("%zu",strlcat(dest,src,2));
-	printf("%s",dest);
+	printf("%zu",strlcat(dst,src,3));
+	printf("%s",dst);
 }*/

@@ -6,15 +6,15 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 20:17:50 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 16:14:23 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:01:38 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }
 
 /*int	main(void){

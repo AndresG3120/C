@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 10:46:31 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/25 10:51:35 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:42:04 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-        c -= 32;
-    return (c);
+		c -= 32;
+	return (c);
 }
 
 /*int	main(void){
 	char c = 'p';
-    printf("%c",ft_toupper(c));
-	return 0;
+	printf("%c",ft_toupper(c));
+	return (0);
 }*/

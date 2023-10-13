@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:39:37 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/21 16:46:04 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 17:01:26 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t len)
 {
 	char	*str;
-	size_t		contador;
+	size_t	contador;
 
 	str = s;
 	contador = 0;

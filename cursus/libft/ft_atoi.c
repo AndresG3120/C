@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 14:43:20 by andresga          #+#    #+#             */
-/*   Updated: 2023/09/25 11:43:18 by andresga         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:00:30 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(char *str)
 	neg = 1;
 	while ((str[c] >= 9 && str[c] <= 13) || str[c] == 32)
 		c++;
-	while ((str[c] == '-' || str[c] == '+'))
+	if ((str[c] == '-' || str[c] == '+'))
 	{
 		if (str[c] == '-')
 			neg *= -1;

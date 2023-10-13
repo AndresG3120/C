@@ -6,7 +6,7 @@
 #    By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 13:11:55 by andresga          #+#    #+#              #
-#    Updated: 2023/09/28 13:47:54 by andresga         ###   ########.fr        #
+#    Updated: 2023/10/13 18:19:50 by andresga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,10 @@ $(NAME):
 	ar rcs $(NAME) $(OBJT)
 
 clean:
-	del $(OBJT)
+	rm -f $(OBJT)
 
-fclean:
-	del $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
 re: fclean all
 
