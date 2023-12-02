@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 10:52:46 by andresga          #+#    #+#             */
-/*   Updated: 2023/10/13 18:38:58 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/02 12:42:50 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if ((s[cont]) == (char)c)
 			return ((char *)&s[cont]);
-	cont++;
+		cont++;
 	}
 	if ((char)c == s[cont])
 		return ((char *)&s[cont]);
