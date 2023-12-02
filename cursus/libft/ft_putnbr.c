@@ -1,40 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 12:59:54 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/02 12:15:59 by andresga         ###   ########.fr       */
+/*   Created: 2023/07/04 17:22:09 by andresga          #+#    #+#             */
+/*   Updated: 2023/12/02 11:45:39 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+void	ft_putchar(char c)
 {
-	unsigned int	count;
-
-	count = 0;
-	if (size > 0)
-	{
-		while (count < (size - 1) && src[count] != '\0')
-		{
-			dest[count] = src[count];
-			count++;
-		}
-		dest[count] = '\0';
-	}
-	return (ft_strlen(src));
+	write(1, &c, 1);
 }
 
-/*int	main(void)
+void	ft_putnbr(int nb)
 {
-	char	dest[] = {"Hola"};
-	char	src[] = {"AAAA"};
+	if (nb == -2147483648)
+		write(1, "-2147483648", 11);
+	else if (nb == 2147483647)
+		write(1, "2147483647", 10);
+	else
+	{
+		if (nb >= 10)
+		{
+			ft_putnbr(nb / 10);
+			ft_putchar(nb % 10 + '0');
+		}
+		if (nb < 0)
+		{
+			ft_putchar('-');
+			ft_putnbr(-nb);
+		}
+		else if (nb < 10)
+		{
+			ft_putchar(nb + '0');
+		}
+	}
+}
 
-	printf("%lu",strlcpy(dest,src,0));
-	printf("%s",dest);
+/*int main(){
+	ft_putnbr(-987654321);
+	return ((0));
 }*/

@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/30 12:32:40 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/02 11:37:35 by andresga         ###   ########.fr       */
+/*   Created: 2023/07/05 16:13:19 by andresga          #+#    #+#             */
+/*   Updated: 2023/12/02 11:46:22 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <unistd.h>
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_putstr(char *str)
 {
-	t_list	*aux;
-
-	if (*lst)
+	while (*str)
 	{
-		while (*lst)
-		{
-			aux = (*lst)->next;
-			ft_lstdelone(*lst, del);
-			*lst = aux;
-		}
+		write(1, str, 1);
+		str++;
 	}
-	*lst = NULL;
 }
+
+/*int	main(void)
+{
+	ft_putstr("Hola");
+	return (0);
+}*/

@@ -6,61 +6,61 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:37:29 by andresga          #+#    #+#             */
-/*   Updated: 2023/10/13 16:37:35 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/02 12:05:26 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_digitcount(long x)
+static size_t	ft_numlen(long i)
 {
-	size_t	c;
+	size_t	j;
 
-	c = 0;
-	if (x == 0)
+	j = 0;
+	if (i == 0)
 	{
-		c++;
-		return (c);
+		j++;
+		return (j);
 	}
-	if (x < 0)
+	if (i < 0)
 	{
-		x *= -1;
-		c++;
+		i = i * -1;
+		j++;
 	}
-	while (x > 0)
+	while (i > 0)
 	{
-		x = x / 10;
-		c++;
+		i = i / 10;
+		j++;
 	}
-	return (c);
+	return (j);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*p;
+	char	*str;
 	size_t	len;
-	long	ln;
+	long	nl;
 
-	ln = n;
-	len = ft_digitcount(ln);
-	p = (char *)malloc(sizeof(char *) * (len + 1));
-	if (!p)
-		return ('\0');
-	p[len--] = '\0';
+	nl = n;
+	len = ft_numlen(nl);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	str[len--] = '\0';
 	if (n == 0)
-		p[0] = 0;
-	if (ln < 0)
+		str[0] = '0';
+	if (nl < 0)
 	{
-		p[0] = '-';
-		ln *= -1;
+		str[0] = '-';
+		nl = nl * -1;
 	}
-	while (ln > 0)
+	while (nl > 0)
 	{
-		p[len] = (ln % 10) + '0';
-		ln = ln / 10;
+		str[len] = (nl % 10) + '0';
+		nl = nl / 10;
 		len--;
 	}
-	return (p);
+	return (str);
 }
 
 /*int main(void)

@@ -6,38 +6,38 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:50:35 by andresga          #+#    #+#             */
-/*   Updated: 2023/10/13 16:58:47 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/02 12:17:08 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	size_t	c1;
-	size_t	c2;
-	size_t	total;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	res;
 
-	c1 = 0;
-	c2 = 0;
-	total = ft_strlen(dst);
-	if (total < (dstsize - 1) && dstsize > 0)
+	i = 0;
+	while (dest[i] != '\0')
+		i++;
+	res = 0;
+	while (src[res] != '\0')
+		res++;
+	if (size <= i)
+		res += size;
+	else
+		res += i;
+	j = 0;
+	while (src[j] != '\0' && i + 1 < size)
 	{
-		while (dst[c1])
-		{
-			c1++;
-		}
-		while (src[c2] && c1 < (dstsize - 1))
-		{
-			dst[c1] = src[c2];
-			c1++;
-			c2++;
-		}
-		dst[c1] = '\0';
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	if (total >= dstsize)
-		total = dstsize;
-	return (total + ft_strlen(src));
+	dest[i] = '\0';
+	return (res);
 }
 
 /*int	main(void)

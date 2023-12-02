@@ -6,51 +6,52 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:38:27 by andresga          #+#    #+#             */
-/*   Updated: 2023/10/13 18:23:15 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/02 12:27:40 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_wordcount(char const *s, char c)
+static size_t	ft_wordcounter(char const *s, char c)
 {
-	size_t	c1;
-	size_t	c2;
+	size_t	i;
+	size_t	x;
 
-	c1 = 0;
-	c2 = 0;
-	while (s[c1])
+	i = 0;
+	x = 0;
+	while (s[i] != '\0')
 	{
-		if (s[c1] != c && (s[c1 + 1] == c || s[c1 + 1]) == '\0')
-			c2++;
+		if (s[i++] != c && (s[i] == c || s[i] == '\0'))
+			x++;
 	}
-	return (c2);
+	return (x);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	*p;
-	size_t	c1;
-	size_t	c2;
-	size_t	size;
+	char	**str;
+	size_t	len;
+	size_t	n;
 
-	c1 = 0;
-	c2 = 0;
-	p = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
-	if (!p)
-		return (NULL);
-	while (s[c1])
+	str = malloc(sizeof(char *) * (ft_wordcounter(s, c) + 1));
+	if (!str)
+		return (0);
+	n = 0;
+	while (*s)
 	{
-		if (*p != c)
+		if (*s != c)
 		{
-			c2 = 0;
-			while (*p && *p++ != c)
-				size++;
-			p[c2++] = ft_substr(s - size, 0, size);
+			len = 0;
+			while (*s && *s != c)
+			{
+				++len;
+				++s;
+			}
+			str[n++] = ft_substr(s - len, 0, len);
 		}
 		else
-			c1++;
+			++s;
 	}
-	p[c2] = '\0';
-	return (p);
+	str[n] = 0;
+	return (str);
 }
