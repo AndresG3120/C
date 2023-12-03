@@ -6,14 +6,14 @@
 #    By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 13:11:55 by andresga          #+#    #+#              #
-#    Updated: 2023/10/13 18:19:50 by andresga         ###   ########.fr        #
+#    Updated: 2023/12/03 11:46:20 by andresga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC =	ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isprint.c ft_putchar.c ft_putnbr.c \
-		ft_putstr.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_tolower.c \
+SRC =	ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isprint.c \
+		ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_tolower.c \
 		ft_toupper.c ft_isalnum.c ft_isascii.c ft_memset.c ft_bzero.c ft_memcpy.c \
 		ft_memmove.c ft_strchr.c ft_strrchr.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 		ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
