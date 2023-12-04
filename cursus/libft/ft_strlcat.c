@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: andtotalga <andtotalga@student.42malaga.com    +#+  +:+       +#+    */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:50:35 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/02 12:17:08 by andresga         ###   ########.fr       */
+/*   Created: 2023/09/21 17:50:35 by andtotalga          #+#    #+#           */
+/*   Updated: 2023/12/02 12:17:08 by andtotalga         ###   ########.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,32 @@
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	res;
+	unsigned int	c1;
+	unsigned int	c2;
+	unsigned int	total;
 
-	i = 0;
-	while (dest[i] != '\0')
-		i++;
-	res = 0;
-	while (src[res] != '\0')
-		res++;
-	if (size <= i)
-		res += size;
+	c1 = 0;
+	c2 = 0;
+	while (dest[c1])
+		c1++;
+	total = 0;
+	while (src[total])
+		total++;
+	if (size <= c1)
+		total += size;
 	else
-		res += i;
-	j = 0;
-	while (src[j] != '\0' && i + 1 < size)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (res);
+		total += c1;
+	while (src[c2] && c1 + 1 < size)
+		dest[c1++] = src[c2++];
+	dest[c1] = '\0';
+	return (total);
 }
 
 /*int	main(void)
 {
-	char	dst[20] = {"_"};
-	char	src[20] = {"dd"};
-
-	printf("%zu",strlcat(dst,src,3));
+	char	dst[] = {"Hola como estas"};
+	char	src[] = {"dd"};
+	ft_strlcat(dst,src,24);
 	printf("%s",dst);
+	return (0);
 }*/

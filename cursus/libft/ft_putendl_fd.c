@@ -20,3 +20,9 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, s, ft_strlen(s));
 	write(fd, &ln, 1);
 }
+
+/*int main(){
+	char *p = {"Hola como estas"};
+	ft_putendl_fd(p,1);
+	return ((0));
+}*/

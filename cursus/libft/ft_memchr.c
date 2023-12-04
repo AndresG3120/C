@@ -14,25 +14,24 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			cont;
+	size_t			contador;
 	unsigned char	*uc;
 
 	uc = (unsigned char *)s;
-	cont = 0;
-	while (cont < n)
+	contador = 0;
+	while (contador < n)
 	{
-		if ((uc[cont]) == (unsigned char)c)
+		if ((uc[contador]) == (unsigned char)c)
 		{
-			return ((void *)(uc + cont));
+			return ((void *)(uc + contador));
 		}
-		cont++;
+		contador++;
 	}
 	return (NULL);
 }
 
 /*int	main(void)
 {
-	char	dest[] = {"Hola buenas"};
-	char    x = 'b';
-	printf("%d", ft_memchr(dest,x,7));
+	char	str[] = {"Hola buenas"};
+	printf("%s", (char *)ft_memchr(str,'l',5));
 }*/

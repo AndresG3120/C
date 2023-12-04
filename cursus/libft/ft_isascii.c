@@ -18,6 +18,6 @@ int	ft_isascii(int c)
 }
 
 /*int	main(void){
-	printf("%d",ft_isascii(6));
+	printf("%d",ft_isascii(42));
 	return (0);
 }*/

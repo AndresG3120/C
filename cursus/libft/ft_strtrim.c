@@ -29,6 +29,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*int	main(void)
 {
 	char	a[] = {"paco_paco"};
-	char    b[] = {"p"};
+	char    b[] = {"paco"};
 	printf("%s ", ft_strtrim(a, b));
 }*/

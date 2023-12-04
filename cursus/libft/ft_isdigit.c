@@ -18,6 +18,6 @@ int	ft_isdigit(int c)
 }
 
 /*int	main(void){
-	printf("%d",ft_str_is_numeric("123124214124"));
+	printf("%d",ft_isdigit(42));
 	return 0;
 }*/

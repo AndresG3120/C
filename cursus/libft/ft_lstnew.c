@@ -23,3 +23,11 @@ t_list	*ft_lstnew(void *content)
 	arr_list->next = NULL;
 	return (arr_list);
 }
+
+/*int main(void)
+{
+	t_list *p1;
+	p1 = ft_lstnew("Hola");
+	printf("El primer nodo es %p %s\n", p1 , (char *)p1->content);
+	return (0);
+}*/

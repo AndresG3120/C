@@ -12,58 +12,34 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dst, const void *src, unsigned int n)
 {
-	char		*dest_ptr;
-	const char	*src_ptr;
+	char	*p;
 
-	dest_ptr = (char *)dest;
-	src_ptr = (const char *)src;
-	if (dest_ptr > src_ptr)
+	p = dst;
+	if (dst > src)
 	{
-		dest_ptr += n;
-		src_ptr += n;
+		dst += n;
+		src += n;
 		while (n-- > 0)
 		{
-			*(--dest_ptr) = *(--src_ptr);
+			*(char *)(--dst) = *(char *)(--src);
 		}
 	}
-	else if (dest_ptr < src_ptr)
+	else if (dst < src)
 	{
 		while (n-- > 0)
 		{
-			*dest_ptr++ = *src_ptr++;
+			*(char *)(dst++) = *(char *)(src++);
 		}
 	}
-	return (dest);
-}
-
-/*void	*ft_memmove(void *dst, const void *src, unsigned int n)
-{
-	unsigned char *str;
-	size_t c;
-
-	c = 0;
-	if (!dst && !src)
-		return (0);
-	str = (unsigned char *)malloc(n);
-	while (c < n)
-	{
-		*(str + c) = *(char *)(src + c);
-		c++;
-	}
-	c = 0;
-	while (c < n)
-	{
-		*(char *)(dst + c) = *(str + c);
-		c++;
-	}
+	dst = p;
 	return (dst);
-}*/
+}
 
 /*int main(){
 	char a[] = {"Hola"};
 	char b[] = {"Adios"};
-	printf("%s",memmove(&a, &b, 2));
+	printf("%s",(char *)memmove(&a, &b, 2));
 	return ((0));
 }*/

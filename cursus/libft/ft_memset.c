@@ -28,7 +28,7 @@ void	*ft_memset(void *b, int c, size_t len)
 }
 
 /*int main(){
-	char a[] = {"Hola"};
-	printf("%s",ft_memset(&a, 'd', 5));
+	char a[] = {"Hola como estas"};
+	printf("%s",(char *)ft_memset(&a, 'd', 5));
 	return ((0));
 }*/

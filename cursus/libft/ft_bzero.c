@@ -15,14 +15,14 @@
 void	ft_bzero(void *s, size_t len)
 {
 	char	*str;
-	size_t	contador;
+	size_t	c;
 
 	str = s;
-	contador = 0;
-	while (contador < len)
+	c = 0;
+	while (c < len)
 	{
-		str[contador] = '\0';
-		contador++;
+		str[c] = '\0';
+		c++;
 	}
 	return ;
 }

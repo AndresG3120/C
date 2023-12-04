@@ -39,5 +39,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*int main(void)
 {
 	char s1[] = {"Hola buenas"};
-	printf("%s", ft_substr(s1,2,2));
+	printf("%s", ft_substr(s1,5,6));
 }*/

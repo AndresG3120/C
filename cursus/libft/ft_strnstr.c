@@ -12,62 +12,35 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *source, const char *dest, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 {
-	unsigned int	dest_len;
-	unsigned int	i;
+	unsigned int	c1;
+	unsigned int	c2;
 
-	if (*dest == '\0')
-		return ((char *)source);
-	dest_len = 0;
-	while (dest[dest_len] != '\0')
-		dest_len++;
-	while (*source != '\0' && len >= dest_len)
+	if (*little == '\0')
+		return ((char *)big);
+	c1 = 0;
+	while (little[c1] != '\0')
+		c1++;
+	while (*big != '\0' && len >= c1)
 	{
-		if (*source == *dest)
+		if (*big == *little)
 		{
-			i = 0;
-			while (i < dest_len && source[i] == dest[i])
-				i++;
-			if (i == dest_len)
-				return ((char *)source);
+			c2 = 0;
+			while (c2 < c1 && big[c2] == little[c2])
+				c2++;
+			if (c2 == c1)
+				return ((char *)big);
 		}
-		source++;
+		big++;
 		len--;
 	}
 	return ((char *)0);
 }
 
-/*char	*ft_strnstr(const char *source, const char *dest, unsigned int len)
-{
-	unsigned int	dest_len;
-	unsigned int	i;
-
-	if (*dest == '\0')
-		return ((char *)source);
-	dest_len = 0;
-	while (dest[dest_len] != '\0')
-		dest_len++;
-	while (*source != '\0' && len >= dest_len)
-	{
-		if (*source == *dest)
-		{
-			i = 0;
-			while (i < dest_len && source[i] == dest[i])
-				i++;
-			if (i == dest_len)
-				return ((char *)source);
-		}
-		source++;
-		len--;
-	}
-	return ((char *)0);
-}*/
-
 /*int	main(void)
 {
-	char	a[8] = {"HolaL p"};
-	char    b[] = {"p"};
-	printf("%s ", ft_strnstr(a, b, 7));
-	printf("%s", strnstr(a, b, 7));
+	char	a[] = {"Hola pedro"};
+	char    b[] = {"pedro"};
+	printf("%s ", ft_strnstr(a, b, 20));
 }*/

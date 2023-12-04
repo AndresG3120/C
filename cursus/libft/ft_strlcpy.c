@@ -13,28 +13,28 @@
 #include <unistd.h>
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 {
-	unsigned int	count;
+	size_t	c;
 
-	count = 0;
+	c = 0;
 	if (size > 0)
 	{
-		while (count < (size - 1) && src[count] != '\0')
+		while (c < (size - 1) && src[c] != '\0')
 		{
-			dest[count] = src[count];
-			count++;
+			dst[c] = src[c];
+			c++;
 		}
-		dest[count] = '\0';
+		dst[c] = '\0';
 	}
 	return (ft_strlen(src));
 }
 
 /*int	main(void)
 {
-	char	dest[] = {"Hola"};
-	char	src[] = {"AAAA"};
+	char	dst[] = {"Hola"};
+	char	src[] = {"Adios"};
 
-	printf("%lu",strlcpy(dest,src,0));
-	printf("%s",dest);
+	ft_strlcpy(dst,src,3);
+	printf("%s",dst);
 }*/

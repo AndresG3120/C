@@ -14,17 +14,18 @@
 
 static size_t	ft_wordcounter(char const *s, char c)
 {
-	size_t	i;
-	size_t	x;
+	size_t	c1;
+	size_t	c2;
 
-	i = 0;
-	x = 0;
-	while (s[i] != '\0')
+	c1 = 0;
+	c2 = 0;
+	while (s[c1] != '\0')
 	{
-		if (s[i++] != c && (s[i] == c || s[i] == '\0'))
-			x++;
+		if (s[c1] != c && (s[c1 + 1] == c || s[c1 + 1] == '\0'))
+			c2++;
+		c1++;
 	}
-	return (x);
+	return (c2);
 }
 
 char	**ft_split(char const *s, char c)
@@ -55,3 +56,18 @@ char	**ft_split(char const *s, char c)
 	str[n] = 0;
 	return (str);
 }
+
+/*int	main(void)
+{
+	int c;
+	char *str[] = {"Hola como estas marrano"};
+
+	c = 0;
+	char **p = ft_split(*str,' ');
+	while (c < 4)
+	{
+		ft_putendl_fd(p[c],1);
+		c++;
+	}
+	return (0);
+}*/

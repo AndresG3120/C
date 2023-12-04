@@ -33,5 +33,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	char a[] = {"HolaL"};
 	char b[] = {"HolaM"};
 	printf("%d",ft_strncmp(a,b,0));
-	printf(" %d",strncmp(a,b,0));
 }*/

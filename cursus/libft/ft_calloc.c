@@ -22,3 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, (count * size));
 	return (p);
 }
+
+/*int main(){
+	printf("%p",ft_calloc(4,2));
+	return ((0));
+}*/

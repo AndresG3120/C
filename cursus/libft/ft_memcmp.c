@@ -33,6 +33,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*int	main(void)
 {
 	char	s1[] = {"Hola buenas"};
-	char    s2[] = {"Hacota del norte"};
-	printf("%d", ft_memcmp(s1,s2,7));
+	char    s2[] = {"Hola adios"};
+	printf("%d", ft_memcmp(s1,s2,6));
 }*/

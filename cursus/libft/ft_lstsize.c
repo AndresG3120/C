@@ -14,13 +14,27 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	size_t	c;
 
-	i = 0;
+	c = 0;
 	while (lst)
 	{
 		lst = lst->next;
-		i++;
+		c++;
 	}
-	return (i);
+	return (c);
 }
+
+/*int main(void)
+{
+	t_list *p1;
+	t_list *p2;
+	t_list *p3;
+	p1 = ft_lstnew("Hola");
+	p3 = ft_lstnew("Espera un poco");
+	p2 = ft_lstnew("Adios");
+	ft_lstadd_back(&p1,p2);
+	ft_lstadd_back(&p1,p3);
+	printf("La lista tiene %d nodos\n", ft_lstsize(p1));
+	return (0);
+}*/

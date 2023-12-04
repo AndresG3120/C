@@ -18,6 +18,6 @@ int	ft_isprint(int c)
 }
 
 /*int	main(void){
-	printf("%d",ft_str_is_printable("dsdsadasda\n"));
+	printf("%d",ft_isprint(42));
 	return (0);
 }*/

@@ -19,6 +19,6 @@ int	ft_isalnum(int c)
 }
 
 /*int	main(void){
-	printf("%d",ft_str_is_alpha(""));
+	printf("%d",ft_isalnum(42));
 	return (0);
 }*/
