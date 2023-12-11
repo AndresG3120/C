@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putuint_pf.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: adiaz-be <adiaz-be@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 16:38:13 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/04 12:34:16 by andresga         ###   ########.fr       */
+/*   Created: 2022/10/15 14:35:21 by adiaz-be          #+#    #+#             */
+/*   Updated: 2022/10/15 14:35:28 by adiaz-be         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putuint_pf(unsigned int num, size_t *counter)
 {
-	char	ln;
+	char	*str;
 
-	ln = '\n';
-	write(fd, s, ft_strlen(s));
-	write(fd, &ln, 1);
+	str = ft_aux_pf(num, "0123456789");
+	ft_putstr_pf(str, counter);
+	free(str);
 }
-
-/*int main(){
-	char *p = {"Hola como estas"};
-	ft_putendl_fd(p,1);
-	return ((0));
-}*/
