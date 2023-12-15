@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:16:45 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/13 16:48:15 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:03:44 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ int	ft_printf(char const *str, ...)
 	return (count);
 }
 
-int		main(void)
+/*int		main(void)
 {
-	//char *s = NULL;
+	char *s = "A";
 
-	printf("%d ",printf("Hola %p\n", (void *)-14523));
-    ft_printf("%d ",ft_printf("Hola %p\n", (void *)-14523));
-}
+	printf("%d ",printf("Hola %p\n", (void *)-2147483647));
+    ft_printf("%d ",ft_printf("Hola %p\n", (void *)-2147483647));
+}*/

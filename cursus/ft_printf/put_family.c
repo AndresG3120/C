@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:04:25 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/13 16:48:20 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:24:55 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,8 @@ void	ft_putptr(void *ptr, int *count)
     unsigned long c;
 
     c = (unsigned long)ptr;
-	write(1,"0x",2);
-    *count += 2;
-    ft_puthex(c, count, hex_lw);
+	ft_putstr("0x",count);
+    ft_putptr2(c, count, hex_lw);
 }
 
 int	ft_strlen(char *str)
@@ -93,26 +92,30 @@ void	ft_rev_char_tab(char *tab, int size)
 	}
 }
 
-void	ft_puthex(unsigned long n, int *count, char * base)
+void	ft_putptr2(unsigned long int n, int *count, char * base)
 {
-	char	res[25];
-	int		c;
-    char    len;
-    
+    unsigned long int    len;
+
     len = ft_strlen(base);
-	c = 0;
-    if (n == 0)
-        ft_putchar('0', count);
-    else
-    {
-        while (n != 0)
-        {
-            res[c] = base[n % len];
-            c++;
-            n /= len;
-        }
-        res[c] = '\0';
-        ft_rev_char_tab(res, ft_strlen(res));
-        ft_putstr(res, count);
-    }
+	if (n >= len)
+	{
+		ft_putptr2(n / len, count, base);
+		ft_putchar(base[n % len], count);
+	}
+	else
+		ft_putchar(base[n], count);
+}
+
+void	ft_puthex(unsigned int n, int *count, char * base)
+{
+    unsigned int    len;
+
+    len = ft_strlen(base);
+	if (n >= len)
+	{
+		ft_puthex(n / len, count, base);
+		ft_putchar(base[n % len], count);
+	}
+	else
+		ft_putchar(base[n], count);
 }

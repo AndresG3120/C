@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:20:23 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/13 15:59:39 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/15 13:12:24 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ int		ft_printf(char const *str, ...);
 void	ft_putchar(char c, int *count);
 void	ft_putstr(char *str, int *count);
 void	ft_putnbr(int num, int *count);
-void	ft_puthex(unsigned long n, int *count, char * base);
+void	ft_puthex(unsigned int n, int *count, char * base);
 void	ft_putptr(void *ptr, int *count);
+void	ft_putptr2(unsigned long int n, int *count, char * base);
 
 /* auxiliary functions */
 
