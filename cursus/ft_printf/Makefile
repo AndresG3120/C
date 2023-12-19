@@ -6,7 +6,7 @@
 #    By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/13 16:04:27 by andresga          #+#    #+#              #
-#    Updated: 2023/12/13 16:05:52 by andresga         ###   ########.fr        #
+#    Updated: 2023/12/19 11:48:56 by andresga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME	=	libftprintf.a
 
 SRC	=	ft_printf.c			\
 		put_family.c		\
+		old_reliable.c		\
 
 OBJS = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: andresga <andresga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:20:23 by andresga          #+#    #+#             */
-/*   Updated: 2023/12/15 13:12:24 by andresga         ###   ########.fr       */
+/*   Updated: 2023/12/19 11:52:19 by andresga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,16 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define hex_up "0123456789ABCDEF"
-# define hex_lw "0123456789abcdef"
+# define HEX_UP "0123456789ABCDEF"
+# define HEX_LW "0123456789abcdef"
 
 int		ft_printf(char const *str, ...);
-
-/* format functions */
-
 void	ft_putchar(char c, int *count);
 void	ft_putstr(char *str, int *count);
+int		ft_strlen(char *str);
 void	ft_putnbr(int num, int *count);
-void	ft_puthex(unsigned int n, int *count, char * base);
+void	ft_put_base(unsigned int n, int *count, char *base);
 void	ft_putptr(void *ptr, int *count);
-void	ft_putptr2(unsigned long int n, int *count, char * base);
-
-/* auxiliary functions */
+void	ft_put_base_long(unsigned long int n, int *count, char *base);
 
 #endif
